@@ -74,10 +74,29 @@
   right: 20px;
   padding: 10px 20px;
   font-size: 16px;
-  z-index: 1000; /* Diğer elemanların üstünde görünmesini sağlar */
-  cursor: pointer; /* İmlecin buton üzerine geldiğinde şeklini değiştirir */
+  z-index: 1000;
+  cursor: pointer;
+  background: linear-gradient(
+    145deg,
+    #ff7e5f,
+    #feb47b
+  ); /* Alev rengi arka plan */
+  color: white; /* Buton yazı rengi */
+  border: none; /* Kenarlık kaldırıldı */
+  border-radius: 30px; /* Yuvarlak kenarlar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasyonlar için geçiş */
 }
 
+.help-button:hover {
+  transform: translateY(-9px); /* Üzerine gelindiğinde hafifçe kaldır */
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15); /* Gölgeyi arttır */
+}
+.bg-black.bg-opacity-50.p-4.rounded {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+}
 body {
   font-family: "Arial", sans-serif;
   margin: 0;

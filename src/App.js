@@ -54,7 +54,8 @@ function App() {
       className="App bg-cover bg-center min-h-screen"
       style={{
         backgroundImage: "url('/solarpanel.jpg')",
-        backgroundSize: "cover", // Bu satırı ekleyin
+        backgroundSize: "cover", // Burada arkaplanı ayarlayın
+        backgroundRepeat: "no-repeat", // Tekrar etmeyi engelle
       }}
     >
       <div className="bg-black bg-opacity-50 p-4 rounded">
