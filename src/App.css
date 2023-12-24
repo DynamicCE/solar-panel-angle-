@@ -38,27 +38,53 @@
 }
 
 .modal {
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  position: fixed; /* Sabit konumlandırma yap */
+  z-index: 1000;
+  right: 0px;
+  bottom: 100px; /* Butonun üstünde 100px boşluk bırak */
+  width: 90%; /* Ekranın %90'ını kaplasın */
+  max-width: 600px; /* Maksimum genişlik sınırı */
+  overflow: visible;
+  flex-direction: column; /* İçerikleri sütun olarak hizala */
+  align-items: center; /* İçerikleri yatay olarak ortala */
+  padding: 20px;
+  border-radius: 10px; /* Kenarları yuvarlak yap */
+  background: linear-gradient(145deg, #ff7e5f, #feb47b);
+}
+p {
+  font-size: 16px;
+  line-height: 1.6; /* Satır yüksekliğini arttır */
+  margin-bottom: 10px;
+}
+.ana-baslik {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(232, 255, 225);
+  background: linear-gradient(145deg, #ff7e5f, #feb47b);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.baslik-ortalama {
+  text-align: center;
+  font-size: larger;
+}
+h3 {
+  font-size: 18px; /* Daha küçük bir font boyutu */
+  margin-bottom: 8px; /* Alt boşluğu ekle */
+  color: #ff7e5f;
 }
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  border-radius: 8px; /* Kenarları yuvarlak yap */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölge efekti */
 }
 
 .close {
   color: #aaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
 }
@@ -70,6 +96,7 @@
 }
 .help-button {
   position: fixed;
+  z-index: 1001;
   bottom: 20px;
   right: 20px;
   padding: 10px 20px;
@@ -120,7 +147,8 @@ body {
 }
 
 h2 {
-  color: #007bff;
+  color: rgb(230, 255, 223);
+  font-size: larger;
 }
 
 p {
@@ -128,21 +156,21 @@ p {
 }
 
 .location-info {
-  background-color: #f9f9f9;
+  background: linear-gradient(145deg, #ed9883, #cfbeb6);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
 }
 
 .sun-position-info {
-  background-color: #f9f9f9;
+  background: linear-gradient(145deg, #ed9883, #cfbeb6);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
 }
 
 .optimal-angle-calculator {
-  background-color: #f9f9f9;
+  background: linear-gradient(145deg, #ed9883, #cfbeb6);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;

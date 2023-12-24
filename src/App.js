@@ -59,9 +59,7 @@ function App() {
       }}
     >
       <div className="bg-black bg-opacity-50 p-4 rounded">
-        <h1 className="text-2xl font-bold text-white mb-4">
-          Güneş Paneli Açısı Hesaplama Uygulaması
-        </h1>
+        <h1 className="ana-baslik">Güneş Paneli Açısı Hesaplama Uygulaması</h1>
         {error ? (
           <p>Hata: {error}</p>
         ) : (

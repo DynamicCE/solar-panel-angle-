@@ -38,7 +38,7 @@ function HelpButton() {
             <span className="close" onClick={toggleModal}>
               &times;
             </span>
-            <h2>Yardım & SSS</h2>
+            <h2 className="baslik-ortalama">Yardım & SSS</h2>
             <h3>Konum Bilgileri</h3>
             <p>
               Enlem ve Boylama göre güneşin bölgenizdeki yüksekliği ve azimuth
