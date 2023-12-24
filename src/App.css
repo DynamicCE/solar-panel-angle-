@@ -1,0 +1,151 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@media (max-width: 768px) {
+  .optimal-angle-calculator select,
+  .optimal-angle-calculator button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    width: 100%;
+  }
+}
+.sun-position-info {
+  position: relative;
+}
+#root,
+.App {
+  height: 100%;
+}
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 65%; /* Tooltipi sağa taşıyo */
+
+  visibility: hidden; /* Başlangıçta görünmez yapar */
+  opacity: 0; /* Başlangıçta saydam yapar */
+  transition: visibility 0.3s, opacity 0.3s; /* animasyon */
+  z-index: 100; /* üstte olsun  */
+}
+
+.sun-position-info:hover .tooltip,
+.sun-position-info .tooltip:hover {
+  visibility: visible; /* Üzerine geldiğinde görünür yapar */
+  opacity: 1; /* Üzerine geldiğinde opak yapar */
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.help-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  z-index: 1000; /* Diğer elemanların üstünde görünmesini sağlar */
+  cursor: pointer; /* İmlecin buton üzerine geldiğinde şeklini değiştirir */
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("../public/solarpanel.jpg"); /* Buraya senin resminin yolu */
+  background-size: cover; /* Resmin ekranı kaplamasını sağlar */
+  background-repeat: no-repeat;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #007bff;
+}
+
+p {
+  font-size: 16px;
+}
+
+.location-info {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.sun-position-info {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.optimal-angle-calculator {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.optimal-angle-calculator select,
+.optimal-angle-calculator button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  width: 100%;
+}
+
+.optimal-angle-calculator button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.optimal-angle-calculator button:hover {
+  background-color: #0056b3;
+}
