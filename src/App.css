@@ -65,9 +65,12 @@ p {
   border-radius: 8px;
   margin-bottom: 20px;
 }
+
 .baslik-ortalama {
+  /* h2 başlıgını ortalıyor bu*/
   text-align: center;
   font-size: larger;
+  color: #007bff;
 }
 h3 {
   font-size: 18px; /* Daha küçük bir font boyutu */
@@ -194,5 +197,13 @@ p {
 }
 
 .optimal-angle-calculator button:hover {
-  background-color: #0056b3;
+  background: linear-gradient(145deg, #ff7e5f, #feb47b);
+}
+
+.hesaplama {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }

@@ -32,7 +32,9 @@ function OptimalAngleCalculator({ latitude, currentMonth }) {
       </select>
       <button onClick={handleSubmit}>Açıyı Hesapla</button>
       {calculatedAngle !== null && (
-        <p>Optimal Panel Açısı: {calculatedAngle.toFixed(2)}°</p>
+        <p className="hesaplama">
+          Optimal Panel Açısı: {calculatedAngle.toFixed(2)}°
+        </p>
       )}
     </div>
   );
