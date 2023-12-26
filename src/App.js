@@ -26,11 +26,13 @@ function App() {
       return;
     }
 
+    // navigator web tarayıcısının işlevlerini içeren bi javascript objesi, geolocation apisine bu obje üzerinden erişmek zorundayım
+    // geolocation coğrafi konumu enlem ve boylam türünde verilerle döndürür, getCurrentPosition da onun bir fonksiyonu.
     navigator.geolocation.getCurrentPosition(
       (position) => {
         const { latitude, longitude } = position.coords;
         setLocation({ latitude, longitude });
-        const sunInfo = SunCalc.getPosition(new Date(), latitude, longitude);
+        const sunInfo = SunCalc.getPosition(new Date(), latitude, longitude); //SunCalc bir JS Kütüphanesi. SunCalc.getPosition() fonksiyonu güneşin yükseklik ve azimuth açılarını hesaplar
         const azimuthInDegrees =
           (sunInfo.azimuth * (180 / Math.PI) + 360) % 360;
         setSunPosition({

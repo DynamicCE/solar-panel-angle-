@@ -3,6 +3,7 @@ import { calculateOptimalAngle, determineSeason } from "./helpers";
 
 function OptimalAngleCalculator({ latitude, currentMonth }) {
   const [calculatedAngle, setCalculatedAngle] = useState(null);
+  const [animate, setAnimate] = useState(false); // Animasyon kontrolü için state
   const season = determineSeason(latitude, currentMonth);
   const [selectedOption, setSelectedOption] = useState("mevsim");
 
@@ -11,15 +12,16 @@ function OptimalAngleCalculator({ latitude, currentMonth }) {
   };
 
   const handleSubmit = () => {
+    setAnimate(false); // Animasyonu sıfırla
     let angle;
     if (selectedOption === "yillik") {
-      // Yıllık hesaplama için enlemi doğrudan kullandım
       angle = latitude * 0.9 - 2.5;
     } else {
-      // Mevsim bazlı hesaplama
       angle = calculateOptimalAngle(latitude, currentMonth);
     }
     setCalculatedAngle(angle);
+    setAnimate(true); // Animasyonu başlat
+    setTimeout(() => setAnimate(false), 2000); // 2 saniye sonra animasyonu durdur
   };
 
   return (
@@ -32,9 +34,16 @@ function OptimalAngleCalculator({ latitude, currentMonth }) {
       </select>
       <button onClick={handleSubmit}>Açıyı Hesapla</button>
       {calculatedAngle !== null && (
-        <p className="hesaplama">
-          Optimal Panel Açısı: {calculatedAngle.toFixed(2)}°
-        </p>
+        <div className="hesaplama-container">
+          <p
+            className={`hesaplama  ${
+              animate ? "popUpAnimation colorShiftAnimation" : ""
+            }`}
+            style={{ fontSize: "23px" }}
+          >
+            Optimal Panel Açısı: {calculatedAngle.toFixed(2)}°
+          </p>
+        </div>
       )}
     </div>
   );
