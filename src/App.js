@@ -33,15 +33,18 @@ function App() {
         const { latitude, longitude } = position.coords;
         setLocation({ latitude, longitude });
         const sunInfo = SunCalc.getPosition(new Date(), latitude, longitude); //SunCalc bir JS Kütüphanesi. SunCalc.getPosition() fonksiyonu güneşin yükseklik ve azimuth açılarını hesaplar
+        //güncel tarih için enlem ve boylamı hesaplar, suncalc'ı zaten bunun için kullandım
+        // navigator.geolocation.getCurrentPosition() bu fonk sadece enlem ve boylamı döndürür, tarih icin suncalc kütphansi
         const azimuthInDegrees =
           (sunInfo.azimuth * (180 / Math.PI) + 360) % 360;
         setSunPosition({
+          // azimuthu hesapladım ama bunu sadece ekrana yazdırdım, hesaplamada kullanmadım.
           altitude: sunInfo.altitude,
           azimuth: azimuthInDegrees,
         });
       },
       () => {
-        setError("Konum bilgisine erişilemiyor");
+        setError("Konum bilgisine erişilemiyor"); // hata durumunda döndürülecek mesaj
       }
     );
   }, []);
@@ -49,24 +52,26 @@ function App() {
   const handleSubmit = () => {
     const angle = calculateOptimalAngle(location.latitude, currentMonth);
     setOptimalAngle(angle);
-  };
+  }; // helpers'dan gelen fonksiyonu kullanarak açıyı döndürüyor(state'i güncelliyor)
 
   return (
     <div
       className="App bg-cover bg-center min-h-screen"
       style={{
         backgroundImage: "url('/solarpanel.jpg')",
-        backgroundSize: "cover", // Burada arkaplanı ayarlayın
-        backgroundRepeat: "no-repeat", // Tekrar etmeyi engelle
+        backgroundSize: "cover", // elementi kaplayacak şekilde resmi büyütür
+        backgroundRepeat: "no-repeat", // resmi tekrar etmeyecek
       }}
     >
       <div className="bg-black bg-opacity-50 p-4 rounded">
+        {" "}
+        {/* opacity: saydamlık , rounded köşeleri yuvarlar*/}
         <div className="baslik-container">
           <h1 className="ana-baslik">
             Güneş Paneli Açısı Hesaplama Uygulaması
           </h1>
         </div>
-        {error ? (
+        {error ? ( // konum bilgisine ulaşıldıysa hesaplamlaarı yapacak, ulaşılamadıysa hata mesajı döndürecek
           <p>Hata: {error}</p>
         ) : (
           <>

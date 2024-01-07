@@ -1,5 +1,5 @@
 export const determineSeason = (latitude, month) => {
-  const isNorthernHemisphere = latitude > 0;
+  const isNorthernHemisphere = latitude > 0; // enlem büyük 0 ise kuzey kutbu
   if (month >= 2 && month <= 4) {
     return isNorthernHemisphere ? "İlkbahar" : "Sonbahar";
   } else if (month >= 5 && month <= 7) {

@@ -131,7 +131,7 @@ body {
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("../public/solarpanel.jpg"); /* Buraya senin resminin yolu */
+  background-image: url("../public/solarpanel.jpg");
   background-size: cover; /* Resmin ekranı kaplamasını sağlar */
   background-repeat: no-repeat;
 }

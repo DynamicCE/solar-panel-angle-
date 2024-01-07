@@ -41,6 +41,14 @@ function HelpButton() {
             <h2 className="baslik-ortalama">Yardım & SSS</h2>
             <h3>Konum Bilgileri</h3>
             <p>
+              Enlem pozitif ise kuzey enlemidir(Kuzey Yarım Küre) Enlem negatif
+              ise güney enlemidir, (Güney Yarım Küre)
+            </p>
+            <p>
+              Pozitif boylamlar Prime meridyenin doğusunda, (Başlangıç
+              Meridyeni) negatif boylamlar Prime Meridian'ın batısındadır.
+            </p>
+            <p>
               Enlem ve Boylama göre güneşin bölgenizdeki yüksekliği ve azimuth
               açısı hesaplanır
             </p>

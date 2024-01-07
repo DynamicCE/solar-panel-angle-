@@ -27,21 +27,24 @@ function OptimalAngleCalculator({ latitude, currentMonth }) {
   return (
     <div className="optimal-angle-calculator">
       <h2>Optimal Açı Hesaplama</h2>
-      <p>Mevcut Mevsim: {season}</p>
+      <p>Mevcut Mevsim: {season}</p>{" "}
       <select value={selectedOption} onChange={handleOptionChange}>
+        {/* Khesaplama tipini seçmek için   */}
         <option value="mevsim">Mevsim Bazlı</option>
         <option value="yillik">Yıllık Sabit</option>
       </select>
-      <button onClick={handleSubmit}>Açıyı Hesapla</button>
+      <button onClick={handleSubmit}>Açıyı Hesapla</button>{" "}
       {calculatedAngle !== null && (
         <div className="hesaplama-container">
+          {/* Eğer hesaplanmış bir açı varsa, bunu göster */}
           <p
             className={`hesaplama  ${
               animate ? "popUpAnimation colorShiftAnimation" : ""
             }`}
             style={{ fontSize: "23px" }}
           >
-            Optimal Panel Açısı: {calculatedAngle.toFixed(2)}°
+            Optimal Panel Açısı: {calculatedAngle.toFixed(2)}°{" "}
+            {/* Hesaplanan açıyı göster */}
           </p>
         </div>
       )}
