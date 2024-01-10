@@ -46,15 +46,15 @@
   width: 90%; /* Ekranın %90'ını kaplasın */
   max-width: 600px; /* Maksimum genişlik sınırı */
   overflow: visible;
-  flex-direction: column; /* İçerikleri sütun olarak hizala */
-  align-items: center; /* İçerikleri yatay olarak ortala */
+  flex-direction: column; /* içerikleri sütun olarak hizalra */
+  align-items: center; /* içerikleri yatay olarak ortalar */
   padding: 20px;
   border-radius: 10px; /* Kenarları yuvarlak yap */
   background: linear-gradient(145deg, #ff7e5f, #feb47b);
 }
 p {
   font-size: 16px;
-  line-height: 1.6; /* Satır yüksekliğini arttır */
+  line-height: 1.6; /* satır yüksekliğini arttırır */
   margin-bottom: 10px;
 }
 .ana-baslik {
@@ -84,6 +84,8 @@ h3 {
   border: 1px solid #888;
   border-radius: 8px; /* Kenarları yuvarlak yap */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+  max-height: 80vh; /* İçerik yüksekliği ekranın %80'ine sınırlı */
+  overflow-y: auto; /* İçeriği aştığında dikey kaydırma çubuğu ekle */
 }
 
 .close {

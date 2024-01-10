@@ -20,6 +20,7 @@ function App() {
   // react dev tools'tan erişmek icin;
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
 
+  //geolocation api'sini kullanarak konum bilgilerini alıyor
   useEffect(() => {
     if (!navigator.geolocation) {
       setError("Geolocation desteklenmiyor");

@@ -65,6 +65,15 @@ function HelpButton() {
               güneş batarken açı tekrar azalır ve bu döngü devam eder.
             </p>
 
+            <p>
+              Azimut açısı, güneşin veya herhangi bir gök cisminin, gözlemcinin
+              bulunduğu noktaya göre yatay düzlemdeki konumunu belirten bir
+              açıdır. Bu açı, genellikle kuzey yönünden başlayarak, saat yönünde
+              ölçülür. Örneğin, doğuda 90°, güneyde 180° ve batıda 270° olarak
+              ifade edilir. Güneşin azimut açısı, gün içinde güneşin hareketine
+              bağlı olarak değişir ve güneşin gökyüzündeki yatay konumunu
+              gösterir.
+            </p>
             <h3>Optimal Açı Hesaplama</h3>
             <p>
               Optimal açı güneş panelinden alınacak verimin en yüksek olduğu
