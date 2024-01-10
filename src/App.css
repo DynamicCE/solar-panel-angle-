@@ -250,7 +250,7 @@ p {
 
 .colorShiftAnimation {
   animation: colorShift 2.5s ease infinite;
-  background: linear-gradient(to left, #171140, #faf0ce, #4ea2d9, #812430);
+  background: linear-gradient(to left, #99992a, #f28219, #cee634, #812430);
   background-size: 200% 200%;
   color: transparent;
   -webkit-background-clip: text;
