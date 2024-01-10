@@ -33,7 +33,8 @@ function App() {
       (position) => {
         const { latitude, longitude } = position.coords;
         setLocation({ latitude, longitude });
-        const sunInfo = SunCalc.getPosition(new Date(), latitude, longitude); //SunCalc bir JS Kütüphanesi. SunCalc.getPosition() fonksiyonu güneşin yükseklik ve azimuth açılarını hesaplar
+        const sunInfo = SunCalc.getPosition(new Date(), latitude, longitude);
+        //SunCalc bir JS Kütüphanesi. SunCalc.getPosition() fonksiyonu güneşin yükseklik ve azimuth açılarını hesaplar
         //güncel tarih için enlem ve boylamı hesaplar, suncalc'ı zaten bunun için kullandım
 
         // navigator.geolocation.getCurrentPosition() bu fonk sadece enlem ve boylamı döndürür, tarih icin suncalc kütphansi
@@ -41,7 +42,7 @@ function App() {
           (sunInfo.azimuth * (180 / Math.PI) + 360) % 360; // azimutu radyandan dereceye dönüştürür
         setSunPosition({
           // azimuthu hesapladım ama bunu sadece ekrana yazdırdım, hesaplamada kullanmadım.
-          altitude: sunInfo.altitude,
+          altitude: sunInfo.altitude, // güneşin yükseklik ve azimuth açılarını state'e aktarıyor
           azimuth: azimuthInDegrees,
         });
       },
